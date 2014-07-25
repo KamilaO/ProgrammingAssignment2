@@ -1,3 +1,5 @@
+# creates matrix object for caching its inverse
+
 makeCacheMatrix <- function(mat = matrix())
 {
   pom <- NULL
@@ -12,6 +14,9 @@ makeCacheMatrix <- function(mat = matrix())
  matrix2 <- function() pom
  list(set=set, get=get, matrix1=matrix1, matrix2=matrix2)
 }
+
+# finds inverse matrix from makeCacheMatrix 
+# inverse calculated  => retrieve inverse from cache.
 
 cacheSolve <- function(mat=matrix(), ...)
   {
